@@ -2,6 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from core.models import Blog
 
+from django.contrib.auth.decorators import login_required
+
+
 def listing(request):
     data = {
         "blogs": Blog.objects.all(),
@@ -38,3 +41,7 @@ def user_info(request):
         is_active: {request.user.is_active}
     """
     return HttpResponse(text, content_type="text/plain")
+
+@login_required
+def private_place(request):
+    return HttpResponse("members only!", content_type="text/plain")
