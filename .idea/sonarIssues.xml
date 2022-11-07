@@ -58,6 +58,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/Blog/templates/listing.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/Blog/templates/registration/login.html">
           <value>
             <set />
